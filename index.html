@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./style.css" />
+  <script type='module' src='./app.js'></script>
+</head>
+<body>
+  <div id="titlebar">
+    <pear-ctrl></pear-ctrl>
+  </div>
+  <main>
+    <div id="peer-status" style="margin-bottom: 1rem; font-weight: bold;">
+      Connected Peers: <span id="peer-count">0</span>
+    </div>
+    
+    <div class="content-container">
+      <div id="setup" class="section">
+        <button id="create-invite" class="action-button">Create</button>
+
+        <div id="or">— or —</div>
+
+        <form id="join-form" class="form-container">
+          <input
+            type="text"
+            id="invite-input"
+            placeholder="Invite"
+            required
+            class="form-input"
+          />
+          <input
+            type="text"
+            id="userdata-input"
+            placeholder="User Data"
+            required
+            class="form-input"
+          />
+          <button type="submit" id="join-button" class="join-button">Join</button>
+        </form>
+        
+        <div class="alert-container">
+          <div id="output" class="alert-modal hidden">
+            <div class="alert-content">
+              <span class="close-button" id="close-alert">&times;</span>
+              <pre id="alert-text"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="todo-section" class="section">
+        <h2 class="section-title">Todo List</h2>
+        <form id="todo-form" class="form-container">
+          <input
+            type="text"
+            id="todo-input"
+            placeholder="Add a new task"
+            required
+            class="form-input"
+          />
+          <button type="submit" class="join-button">Add Task</button>
+        </form>
+        <ul id="todo-list" class="todo-list"></ul>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
